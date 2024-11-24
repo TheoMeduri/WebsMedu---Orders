@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.5.0/remixicon.css">
+    <link rel="stylesheet" href="./assets/style.css">
+    <title>JKSPDFFG | Order</title>
+</head>
+<body>
+
+    <div class="order">
+        <div class="order-status" style="--color1: rgba(125, 221, 78, 0.5); --color2: #7edd4e;">
+            <span>Accepted <i class="ri-global-line"></i></span>
+        </div>
+        <div>
+            <h1 id="order-name">Nalu Festas - Full Website <i class="ri-archive-fill"></i></h1>
+            <h3 id="order-id">KSUIYURDG8247</h3>
+            <p id="order-propriety">Evellyn Nataly de Souza</p>
+            <div id="button">
+                <button onclick="window.location.reload()"><i class="ri-restart-line"></i> <span id="txt">Atualizar</span></button>
+            </div>
+        </div>
+        <div>
+            <img src="./Logo.png" id="order-img" alt="Order Logo">
+        </div>
+    </div>
+
+    <div class="loading">
+        <div class="spinner"></div>
+    </div>
+
+    <script>
+         function showLoading() {
+            const loadingModal = document.querySelector('.loading');
+            loadingModal.style.display = 'flex';
+        }
+
+        function hideLoading() {
+            const loadingModal = document.querySelector('.loading');
+            loadingModal.style.display = 'none';
+        }
+
+        document.addEventListener("DOMContentLoaded", function() {
+            showLoading();
+
+            function gerarNumeroAleatorio() {
+                const numero = Math.floor(Math.random() * (5000 - 1000 + 1)) + 1000;
+                console.log(numero);
+                return numero;
+            }
+
+            const numero = gerarNumeroAleatorio(); // Salva o número gerado em uma variável
+
+            setTimeout(() => {
+                hideLoading();
+            }, numero); // Usa a variável 'numero' aqui no setTimeout
+        });
+    </script>
+
+</body>
+</html>
